@@ -13,7 +13,7 @@
     "data:destroy": "node backend/seeder.js -d",
     "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
   },
-  "author": "Ajay Boro",
+  "author": "Mrigank Mouli Singh",
   "license": "MIT",
   "dependencies": {
     "bcrypt": "^5.1.1",
