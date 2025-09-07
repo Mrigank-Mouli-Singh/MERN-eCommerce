@@ -1,58 +1,89 @@
-# 🛒 MERN eCommerce Platform  
+# eCommerce Platform (MERN Stack)
 
-This is my **full-stack eCommerce platform** built using the **MERN stack** (MongoDB, Express.js, React, Node.js).  
-It is a complete online shopping application with essential and advanced features, designed and customized by **Mrigank Mouli Singh**.  
+> A full-featured eCommerce platform built with the **MERN** stack (MongoDB, Express, React, Node).  
+> Developed and maintained by **Mrigank Mouli Singh**.
 
----
-
-## 🚀 Live Demo  
-🔗 [Click here to view the live app](https://mern-shop-abxs.onrender.com/)  
-
-⚠️ Render’s free tier automatically shuts down after 15 minutes of inactivity.  
-The first request after reactivation may take longer, but subsequent requests will be faster.  
+[Live Demo](https://mern-shop-abxs.onrender.com/) • [Report Issues](https://github.com/Mrigank-Mouli-Singh/MERN-eCommerce/issues)
 
 ---
 
-## ✨ Features  
-
-- 🛍️ Shopping Cart – Add, remove, and manage products easily  
-- ⭐ Product Reviews & Ratings – Users can review & rate products  
-- 🎡 Top Products Carousel – Highlights featured items  
-- 📄 Product Pagination – Browse efficiently  
-- 🔎 Search Functionality – Search by keywords  
-- 👤 User Profile & Orders – Track order history  
-- 🛠️ Admin Dashboard – Manage products, users & orders  
-- 🛒 Product Management – Create, edit & delete products  
-- 👥 User Management – Manage user accounts  
-- 📦 Order Management – Mark orders as delivered  
-- 💳 Razorpay Payments – Secure checkout  
-- 🌱 Database Seeder – Preload sample data  
-
----
-
-## ⚙️ Getting Started  
-
-### 🔑 Prerequisites  
-- MongoDB Atlas account  
-- Razorpay account for payments  
-- Brevo account for email notifications  
+## Table of Contents
+- [About](#about)
+- [Features](#features)
+- [Demo / Sample Logins](#demo--sample-logins)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Environment Variables](#environment-variables)
+  - [Install & Run](#install--run)
+  - [Build & Deploy](#build--deploy)
+  - [Seed / Destroy Data](#seed--destroy-data)
+- [Razorpay & Email (Brevo) Notes](#razorpay--email-brevo-notes)
+- [Contributing](#contributing)
+- [Project Structure (high level)](#project-structure-high-level)
+- [License](#license)
+- [Contact](#contact)
 
 ---
 
-### 📑 Environment Variables  
+## About
+This project is an end-to-end eCommerce application with user authentication, product browsing, search, pagination, reviews, cart & checkout, order management, and an admin dashboard with product/user/order management. It’s built as a learning & demo project and is production-ready for small deployments.
 
-Create a `.env` file in the root folder and add:  
+---
 
-```env
-NODE_ENV=development
-PORT=5000
-JWT_SECRET=ADD_YOUR_JWT_SECRET_HERE
-MONGO_URI=ADD_YOUR_MONGO_URI_HERE
-RAZORPAY_KEY_ID=ADD_YOUR_RAZORPAY_KEY_ID
-RAZORPAY_KEY_SECRET=ADD_YOUR_RAZORPAY_KEY_SECRET
-PAGINATION_MAX_LIMIT=12
-EMAIL_HOST=smtp-relay.brevo.com
-EMAIL_PORT=587
-EMAIL_USER=ADD_YOUR_BREVO_LOGIN
-EMAIL_PASS=ADD_YOUR_BREVO_PASSWORD
-EMAIL_FROM=ADD_YOUR_BREVO_LOGIN
+## Features
+- Product listing with pagination and keyword search
+- Product details, reviews & ratings
+- Shopping cart (add / remove / update items)
+- Checkout flow with shipping and payment
+- Razorpay payment integration
+- User profiles with order history
+- Admin dashboard:
+  - Manage admins
+  - Add / edit / delete products
+  - Manage users
+  - View order details and mark orders as delivered
+- Top products carousel
+- Database seeder for sample data
+
+---
+
+## Demo / Sample Logins
+
+**Live App:** https://mern-shop-abxs.onrender.com/  
+> ⚠️ Render free-tier note: Render may put the app to sleep after ~15 minutes of inactivity. The first request after waking can be slow.
+
+**Admin Dashboard (Live)**
+- URL: `https://mern-shop-abxs.onrender.com/admin/login`
+- Email: `admin@admin.com`
+- Password: `admin123`
+
+**Customer (Live)**
+- John Doe — `john@email.com` / `john123`
+- Alice Smith — `alice@email.com` / `alice123`
+
+---
+
+## Tech Stack
+- Frontend: React (create-react-app)
+- Backend: Node.js, Express
+- Database: MongoDB (Atlas recommended)
+- Payments: Razorpay
+- Email: Brevo (SMTP)
+- Tools: dotenv, bcrypt, JWT, Mongoose
+
+---
+
+## Getting Started
+
+### Prerequisites
+- Node.js (v16+ recommended)
+- npm or yarn
+- MongoDB Atlas or self-hosted MongoDB
+- Razorpay account (Key ID & Key Secret) for payment integration
+- Brevo account (SMTP key) for email delivery (order confirmations, password resets)
+
+### Clone the repo
+```bash
+git clone https://github.com/Mrigank-Mouli-Singh/MERN-eCommerce.git
+cd MERN-eCommerce
